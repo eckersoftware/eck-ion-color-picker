@@ -1,6 +1,6 @@
 {
   "name": "eck-ionic-color-picker",
-  "version": "0.0.1",
+  "version": "0.0.7",
   "description": "A Simple Ionic Color Picker",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
@@ -10,10 +10,12 @@
   "scripts": {
     "ngc": "ngc",
     "build": "npm run ngc",
+    "copy": "copyfiles -u 2 \"./src/components/color-picker/*.{scss,html}\" \"./dist/components/\"",
     "publishPackage": "npm run build && npm publish"
   },
   "repository": {
-    "type": "git"
+    "type": "git",
+    "url": "git+https://github.com/eckersoftware/eck-ion-color-picker.git"
   },
   "keywords": [],
   "author": "Diego Ecker Valtrick",
@@ -24,11 +26,12 @@
     "@angular/compiler-cli": "~8.2.14",
     "@angular/core": "~8.2.14",
     "@angular/forms": "~8.2.14",
-    "@angular/router": "~8.2.14",
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
-    "@types/node": "~8.9.4",
+    "@angular/router": "~8.2.14",
     "@ionic/angular": "5.0.7",
+    "@types/node": "~8.9.4",
+    "copyfiles": "^2.2.0",
     "rxjs": "~6.5.1",
     "typescript": "~3.4.3",
     "zone.js": "~0.9.1"

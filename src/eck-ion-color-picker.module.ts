@@ -1,11 +1,15 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { EckProvider } from './providers/eck-provider';
-import ColorPickerComponent from './components/color-picker/color-picker.component';
+import ColorPickerComponent from './components/color-picker/eck-color-picker.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
  
 @NgModule({
     imports: [
         // Only if you use elements like ion-content, ion-xyz...
+        CommonModule,
+        FormsModule,
         IonicModule
     ],
     declarations: [
@@ -17,10 +21,10 @@ import ColorPickerComponent from './components/color-picker/color-picker.compone
         ColorPickerComponent
     ]
 })
-export class EckModule {
+export class EckIonColorPickerModule {
     static forRoot(): ModuleWithProviders {
         return {
-            ngModule: EckModule,
+            ngModule: EckIonColorPickerModule,
             providers: [EckProvider]
         };
     }
