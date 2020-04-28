@@ -25,7 +25,7 @@ import { EckIonColorPickerModule } from 'eck-ionic-color-picker';
 })
 ...
 ```
-### Using at you page
+### Using at your page
 ```html
   <eck-color-picker
     id="color" name="color"
